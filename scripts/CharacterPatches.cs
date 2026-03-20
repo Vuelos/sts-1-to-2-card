@@ -39,13 +39,11 @@ namespace sts1to2card.scripts
             {
                 if (IsMyCharacter(localPlayer))
                 {
-                    GD.Print("[MyMod] Skipping boss Epoch");
                     return false;
                 }
                 return true;
             }
         }
-
 
         // Architect 修复版
         [HarmonyPatch(typeof(TheArchitect), "WinRun")]
@@ -61,8 +59,6 @@ namespace sts1to2card.scripts
                 if (!IsMyCharacter(localPlayer))
                     return;
 
-                GD.Print("[MyMod]  Architect before WinRun");
-
                 TryFixDialogue(__instance);
             }
 
@@ -76,11 +72,9 @@ namespace sts1to2card.scripts
 
                 var current = field.GetValue(instance);
 
-                //  只在 null 时修复（安全）
+                // 只在 null 时修复（安全）
                 if (current != null)
                     return;
-
-                GD.Print("[MyMod] Injecting fallback dialogue");
 
                 var dialogue = new AncientDialogue(
                     new string[] { "event:/sfx/ancients/architect/architect_vo_generic" }
@@ -93,8 +87,7 @@ namespace sts1to2card.scripts
             }
         }
 
-
-        //  精英击败 跳过
+        // 15精英击败 跳过
         [HarmonyPatch(typeof(ProgressSaveManager), "CheckFifteenElitesDefeatedEpoch")]
         public static class Patch_CheckFifteenElitesDefeatedEpoch
         {
@@ -102,7 +95,6 @@ namespace sts1to2card.scripts
             {
                 if (IsMyCharacter(localPlayer))
                 {
-                    GD.Print("[MyMod] Skipping FifteenElites");
                     return false;
                 }
                 return true;
@@ -117,7 +109,6 @@ namespace sts1to2card.scripts
             {
                 if (IsMyCharacter(localPlayer))
                 {
-                    GD.Print("[MyMod] Skipping FifteenBosses");
                     return false;
                 }
                 return true;

@@ -1,106 +1,87 @@
-复刻1代卡牌到2代
+# sts1to2 – 复刻 杀戮尖塔1 战士与猎人
+*兼容游戏版本：Slay the Spire 2 正式版（非 Beta）*
 
-战士和猎人所有卡牌，添加了四个角色，分别使用一二代牌库
+## 简介
 
-额外修改 -活动肌肉对标贼0费3/5 -优化观察弱点无需选择目标，满足条件时高亮
+本 Mod 复刻了 **杀戮尖塔1** 的战士和猎人角色，并将其移植到 **杀戮尖塔2** 中。  
+Mod 中共添加了 **4 个角色**，分别对应：
 
-待实现 -观察弱点意图不为攻击时的文本 -哨位在在使用点烧时高亮 -整合卡池中同类卡可选择使用哪一版本 蓝金 黑拥与重锤，稀有先古 幽魂腐化
+1. 战士（1代）  
+2. 战士觉醒/融合卡池（STS1+2）  
+3. 猎人（1代）  
+4. 猎人觉醒/融合卡池（STS1+2）  
 
-暂时【不会】更新故障机器人的卡牌
+## 额外
+**无色卡** 
+万灵药、疯狂、结茧
 
-本地化 中文 引用1代文本 葡萄牙语 感谢RodWarrior的提供的本地化 英文 gpt
-引用
-交锋 双持 巩固，抢占先机 声东击西 铁蒺藜 采用2代官方事件中源代码
-https://github.com/Alchyr/BaseLib-StS2 
-https://github.com/GlitchedReme/SlayTheSpire2ModdingTutorials 
-https://github.com/rayinls/STS2_Learner
+**遗物** 
+药丸、人工制品、树枝
 
-——————————————————————————————————————————————————————————————————————
+卡牌逻辑参考和移植了 **杀戮尖塔1/2 原生源代码**，并针对 Godot 平台进行了重写。
 
-Slay the Spire 1 → 2 Card Recreation Mod
+---
 
-This mod recreates cards from Slay the Spire into Slay the Spire 2.
+## 本地化
 
-Compatibility
+- **中文**：引用 STS1 原文  
+- **葡萄牙语**：感谢 RodWarrior 提供本地化  
+- **英文**：由 GPT 生成  
 
-Only supports game version 1.9.3.
+> 注意：本 Mod 仅为复刻和移植。
 
-The game must be played in Simplified Chinese, English, or Portuguese.
+---
 
-Individual card toggles are not supported yet.
+## 免责声明
 
-Ironclad
+- 所有原作版权归 **MegaCrit** 所有  ，本 Mod 仅为复刻与移植 
+- 禁止任何形式的商业行为
 
-33 cards from STS1 completed (all except Heavy Blade).
+---
 
-Silent
+## 参考资料
 
-Implemented cards:
+- [BaseLib for STS2](https://github.com/Alchyr/BaseLib-StS2)  
+- [SlayTheSpire2 Modding Tutorials](https://github.com/GlitchedReme/SlayTheSpire2ModdingTutorials)  
+- [STS2 Learner](https://github.com/rayinls/STS2_Learner)  
 
-Concentrate
+---
 
-Crippling Poison
+# Slay the Spire 2 – STS1 Warrior & Hunter Remake Mod
+*Compatible with: Slay the Spire 2 stable release (non-Beta)*
 
-Catalyst
+## Overview
 
-Corpse Explosion
+This mod faithfully recreates the **Warrior** and **Hunter** characters from **Slay the Spire 1** and ports them into **Slay the Spire 2**.  
+The mod adds **4 characters** in total, corresponding to:
 
-Setup
+1. Warrior (STS1)  
+2. Warrior Awakened/Fusion Card Pool （STS1+2）  
+3. Hunter (STS1)  
+4. Hunter Awakened/Fusion Card Pool （STS1+2）   
 
-Feint
+Some card logic is based on and adapted from the original STS2 source code, and all scripts and gameplay logic have been rewritten for Godot.
 
-Caltrops
+---
 
-Additional Changes
+## Localization
 
-Inflame adjusted to match Silent scaling (0 cost → 3/5).
+- **Chinese**: references STS1 original text  
+- **Portuguese**: thanks to RodWarrior for localization  
+- **English**: generated with GPT  
 
-Spot Weakness no longer requires selecting a target.
+> Note: This mod is a faithful remake and port, not an official release.
 
-The card will highlight when its condition is met.
+---
 
-Planned Features
+## Disclaimer
 
-Remaining Silent card pool
+- All original content copyright belongs to **MegaCrit**.  This mod is a remake and port
+- Any form of commercial use is strictly prohibited
+---
 
-Spot Weakness alternate text when enemy intent is not Attack
+## References
 
-Sentinel highlighting when Burning Pact is used
-
-Card enable/disable toggle
-
-Not Planned (for now)
-
-Cards for Defect will not be implemented for the time being.
-
-Localization
-
-Chinese – uses original STS1 text
-
-Portuguese – localization provided by RodWarrior
-
-English – generated with GPT
-
-References / Credits
-
-The implementations of the following cards are based on official STS2 event source code:
-
-Clash
-
-Dual Wield
-
-Barricade
-
-Setup
-
-Feint
-
-Caltrops
-
-Resources used:
-
-https://github.com/Alchyr/BaseLib-StS2
-
-https://github.com/GlitchedReme/SlayTheSpire2ModdingTutorials
-
-https://github.com/rayinls/STS2_Learner
+- [BaseLib for STS2](https://github.com/Alchyr/BaseLib-StS2)  
+- [SlayTheSpire2 Modding Tutorials](https://github.com/GlitchedReme/SlayTheSpire2ModdingTutorials)  
+- [STS2 Learner](https://github.com/rayinls/STS2_Learner)  

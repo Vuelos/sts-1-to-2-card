@@ -1,6 +1,12 @@
 {
 	"COLORLESS_PANACEA.description": "获得{ArtifactPower:diff()}层[gold]人工制品[/gold]。",
 	"COLORLESS_PANACEA.title": "万灵药",
+	"COLORLESS_MADNESS.description": "你[gold]手牌[/gold]中一张随机牌在本场战斗中耗能变为0。",
+	"COLORLESS_MADNESS.title": "疯狂",
+	"COLORLESS_CHRYSALIS.description": "在你的[gold]抽牌堆[/gold]中加入{Cards:diff()}张随机技能牌。\n它们在本场战斗中可以被免费打出。",
+	"COLORLESS_CHRYSALIS.title": "结茧",
+	"COLORLESS_BANDAGE_UP.description": "回复[green]{Heal}[/green]生命。",
+	"COLORLESS_BANDAGE_UP.title": "包扎",
 	"RED_CORRUPTION.description": "所有技能牌耗能变为0{energyPrefix:energyIcons(1)}。\n所有技能牌在被打出时被[gold]消耗[/gold]",
 	"RED_CORRUPTION.title": "腐化",
 	"RED_DARK_EMBRACE.description": "每当有一张牌被[gold]消耗[/gold]时，抽1张牌。",

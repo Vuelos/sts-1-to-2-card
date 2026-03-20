@@ -96,7 +96,7 @@
 
 
 
-    // 混沌香气事件中的内心独白
+  // 混沌香气事件中的内心独白
   "STS1TO2CARD-GREEN_SILENT_AWAKENED.aromaPrinciple": "[sine][blue]……等待……[/blue][/sine]",
   // 多人模式：存活时回合结束对白
   "STS1TO2CARD-GREEN_SILENT_AWAKENED.banter.alive.endTurnPing": "……",

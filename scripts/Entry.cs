@@ -15,25 +15,23 @@ using sts1to2card.src.RedIroncladAwakened.character;
 
 namespace sts1to2card.Scripts;
 
-// 卡牌排除配置类
+// 卡牌排除
 public static class CardExclusionConfig
 {
-    // 需要从觉醒牌池排除的红色卡牌列表
+    // 觉醒牌池排除的红卡
     public static HashSet<string> RedExcludedFromAwakened = new HashSet<string>
     {
         "RedBludgeon",      // 1代重锤
         "RedHemokinesis",   // 1代御血
         "RedBloodletting",  // 1代放血
-        // 示例: "RedClothesline", "RedThunderclap" 等
     };
-    
-    // 需要从觉醒牌池排除的绿色卡牌列表（如果需要）
+
+    // 觉醒牌池排除的绿卡
     public static HashSet<string> GreenExcludedFromAwakened = new HashSet<string>
     {
-		"GreenCalculatedGamble",   // 1代计算下注
+        "GreenCalculatedGamble",   // 1代计算下注
         "GreenBladeDance",         // 1代小刀
         "GreenPhantasmalKiller",   // 1代幻影杀手
-        // "GreenSomeCard",  // 可以添加要排除的绿色卡牌
     };
 }
 
@@ -44,7 +42,6 @@ public class Entry
     {
         RegisterCards();
         RegisterRelics();
-        // 应用 Harmony 补丁
         ApplyHarmonyPatches();
     }
 
@@ -54,15 +51,9 @@ public class Entry
         {
             var harmony = new Harmony("sts1to2card.patches");
             harmony.PatchAll(Assembly.GetExecutingAssembly());
-            GD.Print("[MyMod] Harmony patches applied successfully.");
-
-            // 可选：输出补丁数量
-            var patchedMethods = harmony.GetPatchedMethods().ToList();
-            GD.Print($"[MyMod] Total patched methods: {patchedMethods.Count}");
         }
-        catch (Exception ex)
+        catch (Exception)
         {
-            GD.PrintErr($"[MyMod] Failed to apply Harmony patches: {ex}");
         }
     }
 
@@ -70,9 +61,9 @@ public class Entry
     {
         Assembly executingAssembly = Assembly.GetExecutingAssembly();
         IEnumerable<Type> enumerable = from t in executingAssembly.GetTypes()
-            where !t.IsAbstract && typeof(CardModel).IsAssignableFrom(t)
-            select t;
-        
+                                       where !t.IsAbstract && typeof(CardModel).IsAssignableFrom(t)
+                                       select t;
+
         foreach (Type item in enumerable)
         {
             string name = item.Name;
@@ -84,7 +75,7 @@ public class Entry
             {
                 // 添加到基础牌池（总是添加）
                 ModHelper.AddModelToPool(typeof(RedIroncladCardPool), item);
-                
+
                 // 检查是否在红色觉醒牌池排除列表中
                 if (!CardExclusionConfig.RedExcludedFromAwakened.Contains(name))
                 {
@@ -94,13 +85,10 @@ public class Entry
             }
             else if (name.StartsWith("Green"))
             {
-                // 添加到基础牌池（总是添加）
                 ModHelper.AddModelToPool(typeof(GreenSilentCardPool), item);
-                
-                // 检查是否在绿色觉醒牌池排除列表中
+
                 if (!CardExclusionConfig.GreenExcludedFromAwakened.Contains(name))
                 {
-                    // 只有不在排除列表中的才添加到觉醒牌池
                     ModHelper.AddModelToPool(typeof(GreenSilentAwakenedCardPool), item);
                 }
             }
@@ -111,9 +99,9 @@ public class Entry
     {
         Assembly executingAssembly = Assembly.GetExecutingAssembly();
         IEnumerable<Type> enumerable = from t in executingAssembly.GetTypes()
-            where !t.IsAbstract && typeof(RelicModel).IsAssignableFrom(t)
-            select t;
-        
+                                       where !t.IsAbstract && typeof(RelicModel).IsAssignableFrom(t)
+                                       select t;
+
         foreach (Type item in enumerable)
         {
             string text = item.Namespace ?? "";
