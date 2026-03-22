@@ -43,7 +43,7 @@ Mod 中共添加了 **4 个角色**，分别对应：
 
 - [BaseLib for STS2](https://github.com/Alchyr/BaseLib-StS2)  
 - [SlayTheSpire2 Modding Tutorials](https://github.com/GlitchedReme/SlayTheSpire2ModdingTutorials)  
-- [STS2 Learner](https://github.com/rayinls/STS2_Learner)  
+- [STS2 Learner](https://github.com/bevantu/STS2_Learner)
 
 ---
 
@@ -84,4 +84,4 @@ Some card logic is based on and adapted from the original STS2 source code, and 
 
 - [BaseLib for STS2](https://github.com/Alchyr/BaseLib-StS2)  
 - [SlayTheSpire2 Modding Tutorials](https://github.com/GlitchedReme/SlayTheSpire2ModdingTutorials)  
-- [STS2 Learner](https://github.com/rayinls/STS2_Learner)  
+- [STS2 Learner](https://github.com/bevantu/STS2_Learner)
