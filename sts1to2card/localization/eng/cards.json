@@ -198,5 +198,42 @@
     "GREEN_DISTRACTION.title": "Distraction",
 
     "GREEN_CALTROPS.description": "Whenever you are attacked, deal {ThornsPower:diff()} damage back.",
-    "GREEN_CALTROPS.title": "Caltrops"
+    "GREEN_CALTROPS.title": "Caltrops",
+
+    "BLUE_AGGREGATE.description": "Gain {Block:diff()} [gold]Block[/gold].\nDraw {Cards:diff()} cards.",
+    "BLUE_AGGREGATE.title": "Aggregate",
+
+    "BLUE_AUTO_SHIELDS.description": "Gain {Block:diff()} [gold]Block[/gold].\nAt the end of your turn, gain {BlueAutoShieldPower:diff()} [gold]Block[/gold].",
+    "BLUE_AUTO_SHIELDS.title": "Auto Shields",
+
+    "BLUE_BLIZZARD.description": "Deal damage equal to {Damage:diff()} times the number of [gold]Frost Channeled[/gold] this combat to ALL enemies. ({Times:diff()})",
+    "BLUE_BLIZZARD.title": "Blizzard",
+
+    "BLUE_BULLSEYE.title": "Bullseye",
+    "BLUE_BULLSEYE.description": "Deal {Damage:diff()} damage.\nApply 1 [gold]Lock-On[/gold].",
+
+    "BLUE_CONSUME.title": "Consume",
+    "BLUE_CONSUME.description": "Gain {Focus:diff()} [gold]Focus[/gold]. Lose 1 Orb slot.",
+
+    "BLUE_DOOM_AND_GLOOM.title": "Doom and Gloom",
+    "BLUE_DOOM_AND_GLOOM.description": "Deal {Damage:diff()} damage to ALL enemies.\nChannel 1 [gold]Dark[/gold].",
+
+    "BLUE_FORCE_FIELD.title": "Force Field",
+    "BLUE_FORCE_FIELD.description": "Costs 1 less {Energy:energyIcons()} for each Power card player this combat.\nGain {Block:diff()} [gold]Block[/gold].",
+
+    "BLUE_HEATSINKS.title": "Heatsinks",
+    "BLUE_HEATSINKS.description": "Whenever you play a Power, draw {Cards:diff()} cards.",
+
+    "BLUE_MELTER.title": "Melter",
+    "BLUE_MELTER.description": "Remove all [gold]Block[/gold] from the enemy.\nDeal {Damage:diff()} damage.",
+    
+    "BLUE_RECURSION.title": "Recursion",
+    "BLUE_RECURSION.description": "[gold]Evoke[/gold] your next Orb. [gold]Channel[/gold] the Orb that was just [gold]Evoked[/gold].",
+
+    "BLUE_STEAM_BARRIER.title": "Steam Barrier",
+    "BLUE_STEAM_BARRIER.description": "Gain {Block:diff()} [gold]Block[/gold]. Decrease this card's [gold]Block[/gold] by 1 this combat.",
+
+    "BLUE_STREAMLINE.title": "Streamline",
+    "BLUE_STREAMLINE.description": "Deal {Damage:diff()} damage.\nReduce this card's cost by 1 this combat."
+
 }
