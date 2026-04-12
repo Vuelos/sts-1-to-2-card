@@ -20,16 +20,28 @@ namespace sts1to2card.src.BlueDefect.cards
         {
         }
 
+        protected override IEnumerable<DynamicVar> CanonicalVars =>
+
+            new List<DynamicVar>
+            {
+                new CardsVar(1)
+            };
+
         protected override void OnUpgrade()
         {
-            base.DynamicVars["Amount"].UpgradeValueBy(1m);
+            base.DynamicVars.Cards.UpgradeValueBy(1m);
         }
+
         protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
         {
             if (CombatState == null)
                 return;
 
-            await PowerCmd.Apply<BlueHeatsinksPower>([base.Owner.Creature], base.DynamicVars["Amount"].IntValue, base.Owner.Creature, this);
+            await PowerCmd.Apply<BlueHeatsinksPower>(
+                [base.Owner.Creature],
+                 base.DynamicVars.Cards.IntValue,
+                 base.Owner.Creature,
+                 this);
         }
     }
 }

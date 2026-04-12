@@ -20,6 +20,13 @@ namespace sts1to2card.src.BlueDefect.cards
         {
         }
 
+        protected override IEnumerable<DynamicVar> CanonicalVars =>
+        
+            new List<DynamicVar>
+            {
+                new DamageVar(10m, ValueProp.Move)
+            };
+
         protected override void OnUpgrade()
         {
             base.DynamicVars.Damage.UpgradeValueBy(4m);

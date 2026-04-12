@@ -20,19 +20,19 @@ namespace sts1to2card.src.BlueDefect.cards
             : base(1, CardType.Attack, CardRarity.Uncommon, TargetType.AllEnemies, true)
         {
         }
-        private const string Timmes = "Timmes";
+        private const string Times = "Times";
 
         protected override IEnumerable<DynamicVar> CanonicalVars =>
         
             new List<DynamicVar>
             {
                 new DamageVar(2m, ValueProp.Move),
-                new DynamicVar(Timmes, 2m)
+                new DynamicVar(Times, 2m)
             };
         
         protected override void OnUpgrade()
         {
-            base.DynamicVars[Timmes].UpgradeValueBy(1m);
+            base.DynamicVars[Times].UpgradeValueBy(1m);
         }
 
         public override async Task AfterOrbChanneled(PlayerChoiceContext choiceContext, Player player, OrbModel orb)
@@ -43,7 +43,7 @@ namespace sts1to2card.src.BlueDefect.cards
             if (player != Owner || orb.GetType() != typeof(FrostOrb))
                 return;
 
-            base.DynamicVars[Timmes].UpgradeValueBy(1m);
+            base.DynamicVars[Times].UpgradeValueBy(1m);
         }
 
         protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)

@@ -200,14 +200,14 @@
     "GREEN_CALTROPS.description": "Whenever you are attacked, deal {ThornsPower:diff()} damage back.",
     "GREEN_CALTROPS.title": "Caltrops",
 
-    "BLUE_AGGREGATE.description": "Gain {Block:diff()} [gold]Block[/gold].\nDraw {Cards:diff()} cards.",
+    "BLUE_AGGREGATE.description": "Gain {Energy:energyIcons()} for every {Cards:diff()} cards in your draw pile.",
     "BLUE_AGGREGATE.title": "Aggregate",
 
-    "BLUE_AUTO_SHIELDS.description": "Gain {Block:diff()} [gold]Block[/gold].\nAt the end of your turn, gain {BlueAutoShieldPower:diff()} [gold]Block[/gold].",
-    "BLUE_AUTO_SHIELDS.title": "Auto Shields",
-
-    "BLUE_BLIZZARD.description": "Deal damage equal to {Damage:diff()} times the number of [gold]Frost Channeled[/gold] this combat to ALL enemies. ({Times:diff()})",
+      "BLUE_AUTO_SHIELDS.title": "Auto Shields",
+    "BLUE_AUTO_SHIELDS.description": "If you have no [gold]Block[/gold], gain {Block:diff()} [gold]Block[/gold].",
+  
     "BLUE_BLIZZARD.title": "Blizzard",
+    "BLUE_BLIZZARD.description": "Deal damage equal to {Damage:diff()} times the number of [gold]Frost Channeled[/gold] this combat to ALL enemies. ({Times:diff()})",
 
     "BLUE_BULLSEYE.title": "Bullseye",
     "BLUE_BULLSEYE.description": "Deal {Damage:diff()} damage.\nApply 1 [gold]Lock-On[/gold].",
@@ -222,7 +222,7 @@
     "BLUE_FORCE_FIELD.description": "Costs 1 less {Energy:energyIcons()} for each Power card player this combat.\nGain {Block:diff()} [gold]Block[/gold].",
 
     "BLUE_HEATSINKS.title": "Heatsinks",
-    "BLUE_HEATSINKS.description": "Whenever you play a Power, draw {Cards:diff()} cards.",
+    "BLUE_HEATSINKS.description": "Whenever you play a Power card, draw {Cards:diff()} card(s).",
 
     "BLUE_MELTER.title": "Melter",
     "BLUE_MELTER.description": "Remove all [gold]Block[/gold] from the enemy.\nDeal {Damage:diff()} damage.",

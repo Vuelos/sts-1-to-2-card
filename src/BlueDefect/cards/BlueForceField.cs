@@ -19,6 +19,13 @@ namespace sts1to2card.src.BlueDefect.cards
         {
         }
 
+        protected override IEnumerable<DynamicVar> CanonicalVars =>
+        
+            new List<DynamicVar>
+            {
+                new BlockVar(12m, ValueProp.Move),
+            };
+
         protected override void OnUpgrade()
         {
             base.DynamicVars.Block.UpgradeValueBy(2m);
@@ -29,7 +36,11 @@ namespace sts1to2card.src.BlueDefect.cards
             if (CombatState == null)
                 return;
 
-            base.DynamicVars.Energy.UpgradeValueBy(-1m);
+            if (cardPlay.Card.Owner != Owner || cardPlay.Card.Type != CardType.Power)
+                return;
+            
+            if (base.EnergyCost.Canonical > 0)
+                base.EnergyCost.UpgradeBy(-1);
         }
 
         protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
@@ -38,7 +49,6 @@ namespace sts1to2card.src.BlueDefect.cards
                 return;
 
             await CreatureCmd.GainBlock(base.Owner.Creature, base.DynamicVars.Block, cardPlay);
-            base.DynamicVars.Block.UpgradeValueBy(-1m);
         }
     }
 }

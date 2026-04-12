@@ -25,7 +25,6 @@ namespace sts1to2card.src.BlueDefect.cards
             {
                 new BlockVar(6m, ValueProp.Move)
             };
-        
 
         protected override void OnUpgrade()
         {
