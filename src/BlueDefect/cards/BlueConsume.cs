@@ -22,18 +22,18 @@ namespace sts1to2card.src.BlueDefect.cards
         {
         }
 
-        private const string Amount = "Amount";
+        private const string Focus = "Focus";
 
         protected override IEnumerable<DynamicVar> CanonicalVars =>
         
             new List<DynamicVar>
             {
-                new DynamicVar(Amount, 2)
+                new DynamicVar(Focus, 2)
             };
 
         protected override void OnUpgrade()
         {
-            base.DynamicVars[Amount].UpgradeValueBy(1m);
+            base.DynamicVars[Focus].UpgradeValueBy(1m);
         }
 
         protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
@@ -43,7 +43,7 @@ namespace sts1to2card.src.BlueDefect.cards
 
             await PowerCmd.Apply<FocusPower>(
                 [Owner.Creature],
-                base.DynamicVars[Amount].IntValue,
+                base.DynamicVars[Focus].IntValue,
                 Owner.Creature,
                 this);
 

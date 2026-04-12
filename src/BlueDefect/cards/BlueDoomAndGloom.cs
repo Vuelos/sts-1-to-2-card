@@ -37,10 +37,11 @@ namespace sts1to2card.src.BlueDefect.cards
             if (CombatState == null)
                 return;
 
-            if (cardPlay.Target == null)
-                return;
-                
-            await CreatureCmd.Damage(choiceContext, cardPlay.Target, base.DynamicVars.Damage, this);
+            await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue)
+            .FromCard(this)
+            .TargetingAllOpponents(base.CombatState)
+			.Execute(choiceContext);
+
             await OrbCmd.Channel<DarkOrb>(choiceContext, Owner);
         }
     }

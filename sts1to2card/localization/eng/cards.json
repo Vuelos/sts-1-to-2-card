@@ -243,5 +243,8 @@
     "BLUE_REINFORCED_BODY.description": "Gain {Block:diff()} [gold]Block[/gold] X times.",
 
     "BLUE_REPROGRAM.title": "Reprogram",
-    "BLUE_REPROGRAM.description": "Lose {Focus:diff()} [gold]Focus[/gold].\nGain {Str:diff()} [gold]Strength[/gold].\nGain {Dex:diff()} [gold]Dexterity[/gold]."
+    "BLUE_REPROGRAM.description": "Lose {Focus:diff()} [gold]Focus[/gold].\nGain {Str:diff()} [gold]Strength[/gold].\nGain {Dex:diff()} [gold]Dexterity[/gold].",
+
+    "BLUE_SEEK.title": "Seek",
+    "BLUE_SEEK.description": "Put {Cards:diff()} card(s) from your draw pile into your hand.\n[gold]Exhaust[/gold]"
 }
